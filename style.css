@@ -7,28 +7,25 @@ body {
   color: white;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
- 
 }
 
-
-/*Header */ 
+/*Header */
 header {
-  
   background-color: #12161f;
-  padding: 20px ;
+  padding: 20px;
 }
 
 nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color:#0d0d2c;
+  background-color: #0d0d2c;
   padding: 10px 20px;
   position: fixed;
   top: 0;
-  left: 0; 
-  width: 100%; 
-  z-index: 1000; 
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .ul_nav {
@@ -44,9 +41,9 @@ nav {
 }
 
 .ul_nav li a {
-  color: #fff; 
+  color: #fff;
   text-decoration: none;
-  padding: 8px 15px; 
+  padding: 8px 15px;
   display: block;
 }
 
@@ -58,7 +55,7 @@ nav {
 }
 
 .nav_home {
-  margin-right: 40px; 
+  margin-right: 40px;
 }
 
 /* Dropdown Menü */
@@ -95,84 +92,73 @@ nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  padding: 0 20px; 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
   text-align: center;
-
-
 }
-
 
 .content {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 8px 20px;
   border-radius: 8px; /* Köşeleri yuvarla */
   max-width: 600px;
- 
 }
 
 .home h1 {
-
   margin: 0;
   font-family: "Cinzel", serif;
   color: #ffffff; /* Beyaz renk */
   font-size: 4.4em;
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Siyah gölge */
-
-
-  
- 
 }
 
 .home p {
-  
   font-size: 1.8em;
   margin: 20px 0;
   text-align: center;
   line-height: 1.8;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
   margin-top: 10px;
 }
 
 /* About Constellations */
 .constellation-info {
-  background-color: #030303; 
-  padding: 60px 20px;
+  background-color: #030303;
+  padding: 100px 80px;
   text-align: center;
   color: #ffffff;
+  
+
 }
 
 .constellation-info h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  letter-spacing: 2px; 
+  letter-spacing: 2px;
 }
 
 .constellation-info p {
-  max-width: 600px; 
-  margin: 0 auto; 
+  width: 60%;
+  margin: 0 auto;
   font-size: 1.3em;
-  line-height: 1.8; 
+  line-height: 1.8;
   margin-bottom: 30px;
 }
 
-
-
 .video-container {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-top: 30px;
 }
 
 .video-container iframe {
-  border: 2px solid #ffffff; 
+  border: 2px solid #ffffff;
   border-radius: 8px;
 }
-
 
 /* guide*/
 
@@ -188,7 +174,6 @@ nav {
   font-size: 2.5em;
   margin-bottom: 20px;
   color: #ffffff;
-  
 }
 
 .guide-grid {
@@ -203,13 +188,13 @@ nav {
   align-items: center;
   gap: 5px;
   padding: 20px;
-  border: 1px solid,#4f4095;
+  border: 1px solid, #4f4095;
   border-radius: 8px;
 }
 
 /* Başlık */
 .constellation-card h3 {
-  grid-column: 1 / -1; 
+  grid-column: 1 / -1;
   margin: 0;
   font-size: 2em;
   text-align: center;
@@ -222,7 +207,6 @@ nav {
   height: auto;
   border-radius: 8px;
   margin-left: 80px;
- 
 }
 
 /* Açıklama */
@@ -233,8 +217,6 @@ nav {
   line-height: 1.6;
   margin-right: 50px;
 }
-
-
 
 /* Galleri*/
 
@@ -299,66 +281,75 @@ nav {
   pointer-events: none;
 }
 
-/* Hover olduğunda isimleri göster */
+
 .gallery-item:hover .image-name {
   opacity: 1;
 }
 
-
-
 /*
 FAQ*/
-
 .faq {
-  max-width: 600px;
-  margin: auto;
-  font-family: Arial, sans-serif;
+  margin-left: 15%;
+  width:fit-content ;
+  font-family: "Playfair Display", serif;
+  align-items: center;
+  margin-right: 5%;
+  
 }
 
 .faq h2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 20px;
+  grid-column: 1 / -1;
+  
 }
 
-.faq_item {
-  margin-bottom: 15px;
+.faq {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px;
+  
+
+
+}
+
+
+.faq_item input[type="checkbox"] {
+  display: none; 
+  /*border: #4f4095 3px solid;*/
 }
 
 .faq_item label {
-  display: block;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+  /*border: #4f4095 3px solid;*/
 }
 
 .faq_item label:hover {
-  background-color: #e0e0e0;
+  color: #9795d7;
 }
 
 .faq_answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-}
-
-.faq_item input[type="checkbox"] {
-  display: none;
+  padding-top: 10px;
+  font-size: 18px;
 }
 
 .faq_item input[type="checkbox"]:checked ~ .faq_answer {
-  max-height: 200px; /* Cevapların maksimum yüksekliğini ayarlayın */
-  margin-top: 10px;
+  max-height: 200px; 
 }
 
 .faq_answer p {
+  margin: 0;
   padding: 10px;
-  background-color: #fafafa;
+  background-color: #0e2b7b;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
+
