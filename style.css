@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+body{
+  background-color:#12161F;
+
+  color: white;
+}
+* Header */
+header {
+    background-color: #12161F;
+    padding: 15px 20px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dropdown Menü */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1f1f3b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.content{
+  background-image:url(./image2/max-mckinnon-c9OCWLka764-unsplash.jpg);
+}
+
+
+  
