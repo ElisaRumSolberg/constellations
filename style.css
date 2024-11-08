@@ -303,3 +303,62 @@ nav {
 .gallery-item:hover .image-name {
   opacity: 1;
 }
+
+
+
+/*
+FAQ*/
+
+.faq {
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.faq_item {
+  margin-bottom: 15px;
+}
+
+.faq_item label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.faq_item label:hover {
+  background-color: #e0e0e0;
+}
+
+.faq_answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq_item input[type="checkbox"] {
+  display: none;
+}
+
+.faq_item input[type="checkbox"]:checked ~ .faq_answer {
+  max-height: 200px; /* Cevapların maksimum yüksekliğini ayarlayın */
+  margin-top: 10px;
+}
+
+.faq_answer p {
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
