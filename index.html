@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discovering the Constellations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Guide</a>
-            <div class="dropdown-content">
-              <a href="#constellation1">Ursa Major (The Great Bear)</a>
-              <a href="#constellation2">Ursa Minor (The Little Bear)</a>
-              <a href="#constellation3">Orion (The Hunter)</a>
-              <a href="#constellation4">Cassiopeia</a
-              ><a href="#constellation5">Scorpius (The Scorpion)</a>
-              <a href="#constellation6">Gemini (The Twins)</a
-              ><a href="#constellation7">Leo (The Lion)</a>
-              <a href="#constellation8">Taurus (The Bull)</a>
-              <a href="#constellation15">Sagittarius (The Archer)</a>
-              <a href="#constellation9">Aquarius (The Water Bearer)</a>
-              <a href="#constellation10">Pisces (The Fish)</a
-              ><a href="#constellation11"
-                >Corona Borealis (The Northern Crown)</a
-              >
-              <a href="#constellation12">Aquila (The Eagle)</a
-              ><a href="#constellation13">Bootes (The Herdsman)</a>
-              <a href="#constellation14">Pegasus (The Winged Horse)</a>
-            </div>
-          </li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Calender</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
+        <div class="nav_home">
+          <ul class="ul_nav">
+            <li><a href="#">Home</a></li>
+          </ul>
+        </div>
+
+        <div class="nav_others">
+          <ul class="ul_nav">
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Guide</a>
+              <div class="dropdown-content">
+                <a href="#constellation1">Ursa Major (The Great Bear)</a>
+                <a href="#constellation2">Ursa Minor (The Little Bear)</a>
+                <a href="#constellation3">Orion (The Hunter)</a>
+                <a href="#constellation4">Cassiopeia</a
+                ><a href="#constellation5">Scorpius (The Scorpion)</a>
+                <a href="#constellation6">Gemini (The Twins)</a
+                ><a href="#constellation7">Leo (The Lion)</a>
+                <a href="#constellation8">Taurus (The Bull)</a>
+                <a href="#constellation15">Sagittarius (The Archer)</a>
+                <a href="#constellation9">Aquarius (The Water Bearer)</a>
+                <a href="#constellation10">Pisces (The Fish)</a
+                ><a href="#constellation11"
+                  >Corona Borealis (The Northern Crown)</a
+                >
+                <a href="#constellation12">Aquila (The Eagle)</a
+                ><a href="#constellation13">Bootes (The Herdsman)</a>
+                <a href="#constellation14">Pegasus (The Winged Horse)</a>
+              </div>
+            </li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Calender</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <section class="home">
@@ -90,7 +112,7 @@
         <article id="constellation1" class="constellation-card">
           <h3>Ursa Major (The Great Bear)</h3>
           <img
-            src="./image_guide/1. Ursa_Major.jpg"
+            src="./image_guide/1. Ursa Major (The Great Bear).jpg"
             alt="Ursa Major (The Great Bear)"
           />
 
@@ -303,21 +325,29 @@
     <section class="nasa-gallery">
       <h2>NASA Image Gallery</h2>
       <div class="gallery-grid">
-        <img src="./image/Aquarius.jpg" alt="Aquarius" />
-        <img src="./image/Aquila.jpg" alt="Aquila" />
-        <img src="./image/Bootes.jpg" alt="Bootes" />
-        <img src="./image/Cassiopeia.jpg" alt="Cassiopeia" />
-        <img src="./image/Corona Borealis.jpg" alt="Corona Borealis" />
-        <img src="./image/Gemini.jpg" alt="Gemini" />
-        <img src="./image/Leo.jpg" alt="Leo" />
-        <img src="./image/Orion.jpg" alt="Orion" />
-        <img src="./image/Pegasus.jpg" alt="Pegasus" />
-        <img src="./image/Pisces.jpg" alt="Pisces" />
-        <img src="./image/Scorpius.jpg" alt="Scorpius" />
-        <img src="./image/Taurus.jpg" alt="Taurus" />
-        <img src="./image/Ursa_Major.jpg" alt="Ursa_Major" />
-        <img src="./image/Ursa_Minor.jpg" alt="Ursa_Minor" />
-        <img src="./image/Sagittarius.jpg" alt="Sagittarius" />
+        <div class="gallery-item"><img src="./image/Aquarius.jpg" alt="Aquarius" /></div>
+        <div class="gallery-item"><img src="./image/Aquila.jpg" alt="Aquila" /></div>
+        <div class="gallery-item"><img src="./image/Bootes.jpg" alt="Bootes" /></div>
+        <div class="gallery-item"> <img src="./image/Cassiopeia.jpg" alt="Cassiopeia" /></div>
+        <div class="gallery-item"> <img src="./image/Corona Borealis.jpg" alt="Corona Borealis" /></div>
+        <div class="gallery-item"><img src="./image/Gemini.jpg" alt="Gemini" /></div>
+        <div class="gallery-item">  <img src="./image/Leo.jpg" alt="Leo" /></div>
+        <div class="gallery-item"><img src="./image/Ursa_Major.jpg" alt="Ursa_Major" /></div>
+        <div class="gallery-item"><img src="./image/Ursa_Minor.jpg" alt="Ursa_Minor" /></div>
+        <div class="gallery-item"> <img src="./image/Taurus.jpg" alt="Taurus" /></div>
+        <div class="gallery-item"><img src="./image/Scorpius.jpg" alt="Scorpius" /></div>
+        <div class="gallery-item"><img src="./image/Pisces.jpg" alt="Pisces" /></div>
+        <div class="gallery-item"><img src="./image/Pegasus.jpg" alt="Pegasus" /></div>
+        <div class="gallery-item"><img src="./image/Orion.jpg" alt="Orion" /></div>
+        <div class="gallery-item"><img src="./image/Sagittarius.jpg" alt="Sagittarius" /></div>
+        
+        
+        
+       
+       
+        
+      
+
         
       </div>
     </section>
