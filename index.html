@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="up">
     <header>
       <nav>
         <div class="nav_home">
@@ -44,18 +44,16 @@
                 <a href="#constellation6">Gemini (The Twins)</a
                 ><a href="#constellation7">Leo (The Lion)</a>
                 <a href="#constellation8">Taurus (The Bull)</a>
-                <a href="#constellation15">Sagittarius (The Archer)</a>
-                <a href="#constellation9">Aquarius (The Water Bearer)</a>
-                <a href="#constellation10">Pisces (The Fish)</a
-                ><a href="#constellation11"
-                  >Corona Borealis (The Northern Crown)</a
-                >
-                <a href="#constellation12">Aquila (The Eagle)</a
-                ><a href="#constellation13">Bootes (The Herdsman)</a>
-                <a href="#constellation14">Pegasus (The Winged Horse)</a>
+                <a href="#constellation9">Sagittarius (The Archer)</a>
+                <a href="#constellation10">Aquarius (The Water Bearer)</a>
+                <a href="#constellation11">Pisces (The Fish)</a
+                ><a href="#constellation12">Corona Borealis (The Northern Crown)</a>
+                <a href="#constellation13">Aquila (The Eagle)</a
+                ><a href="#constellation14">Bootes (The Herdsman)</a>
+                <a href="#constellation15">Pegasus (The Winged Horse)</a>
               </div>
             </li>
-            <li><a href="#thrid">Gallery</a></li>
+            <li><a href="#third">Gallery</a></li>
             <li><a href="#fourth">Calender</a></li>
             <li><a href="#fifth">FAQ</a></li>
           </ul>
@@ -64,12 +62,27 @@
     </header>
     <section class="home" id="first">
       <div class="content">
-        <h1>Star Glimpse</h1>
-        <p>
-          Welcome to Star Glimpse, your gateway to the stars! Whether you're an
-          astronomy enthusiast, a stargazing beginner, or simply fascinated by
-          the wonders of the night sky, you've come to the right place.
-        </p>
+        <div class="typing-effect" id="text"></div>
+
+        <script>
+          const text =
+            "Welcome to Star Glimpse, your gateway to the stars! Whether you're an astronomy enthusiast, a stargazing beginner, or simply fascinated by the wonders of the night sky, you've come to the right place.";
+          const words = text.split(" "); // Metni kelimelere böl
+          let index = 0;
+          const speed = 200; // Kelime yazma hızı (milisaniye)
+
+          function typeWriter() {
+            if (index < words.length) {
+              // Her seferinde bir kelime ekleyerek göster
+              document.getElementById("text").textContent += words[index] + " ";
+              index++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+
+          // Fonksiyonu başlat
+          typeWriter();
+        </script>
       </div>
     </section>
     <section class="constellation-info" id="second">
@@ -108,220 +121,255 @@
         ></iframe>
       </div>
     </section>
-    <section class="constellation-guide" >
+    <section class="constellation-guide">
       <h2>Constellation Guide</h2>
+      <hr />
+      <!-- ben yaptim simdi-->
       <div class="guide-grid">
         <!-- Constellation Cards -->
         <article id="constellation1" class="constellation-card">
-          <h3>Ursa Major (The Great Bear)</h3>
           <img
             src="./image_guide/1. Ursa Major (The Great Bear).jpg"
             alt="Ursa Major (The Great Bear)"
           />
-
-          <p>
-            Known for the “Big Dipper” pattern, Ursa Major is easily
-            recognizable in the northern hemisphere. Consisting of seven bright
-            stars, it serves as a guide to finding the North Star. Ancient
-            sailors used this constellation for navigation.
-          </p>
+          <div class="card-info">
+            <h3>Ursa Major (The Great Bear)</h3>
+            <p>
+              Known for the “Big Dipper” pattern, Ursa Major is easily
+              recognizable in the northern hemisphere. Consisting of seven
+              bright stars, it serves as a guide to finding the North Star.
+              Ancient sailors used this constellation for navigation.
+            </p>
+          </div>
         </article>
 
         <article id="constellation2" class="constellation-card">
-          <h3>Ursa Minor (The Little Bear)</h3>
           <img
             src="./image_guide/2. Ursa Minor (The Little Bear).jpg"
             alt="Ursa Minor (The Little Bear)"
           />
-
-          <p>
-            Ursa Minor includes the North Star, which is a reference point for
-            finding the north direction. It has a shape similar to the Great
-            Bear but is smaller. It has been a fixed point in the sky for
-            finding the north since ancient times.
-          </p>
+          <div class="card-info">
+            <h3>Ursa Minor (The Little Bear)</h3>
+            <p>
+              Ursa Minor includes the North Star, which is a reference point for
+              finding the north direction. It has a shape similar to the Great
+              Bear but is smaller. It has been a fixed point in the sky for
+              finding the north since ancient times.
+            </p>
+          </div>
         </article>
         <article id="constellation3" class="constellation-card">
-          <h3>Orion (The Hunter)</h3>
           <img
             src="./image_guide/3. Orion (The Hunter).jpg"
             alt="Orion (The Hunter)"
           />
-
-          <p>
-            Orion is known as the hunter in mythology, easily recognizable by
-            the three bright stars in its belt. Orion’s brightest stars are
-            Betelgeuse (reddish) and Rigel (bluish-white). It appears as a
-            distinct shape in the winter sky.
-          </p>
+          <div class="card-info">
+            <h3>Orion (The Hunter)</h3>
+            <p>
+              Orion is known as the hunter in mythology, easily recognizable by
+              the three bright stars in its belt. Orion’s brightest stars are
+              Betelgeuse (reddish) and Rigel (bluish-white). It appears as a
+              distinct shape in the winter sky.
+            </p>
+          </div>
         </article>
 
         <article id="constellation4" class="constellation-card">
-          <h3>Cassiopeia</h3>
           <img
             src="./image_guide/4. Cassiopeia (Seated Queen).jpg"
             alt="Cassiopeia"
           />
+          <div class="card-info">
+            <h3>Cassiopeia</h3>
 
-          <p>
-            Shaped like the letter W or M, it can be seen throughout the night
-            in the northern hemisphere. In mythology, it represents Queen
-            Cassiopeia of Ethiopia, who was placed in the sky, turned upside
-            down as a punishment for her vanity.
-          </p>
+            <p>
+              Shaped like the letter W or M, it can be seen throughout the night
+              in the northern hemisphere. In mythology, it represents Queen
+              Cassiopeia of Ethiopia, who was placed in the sky, turned upside
+              down as a punishment for her vanity.
+            </p>
+          </div>
         </article>
 
         <article id="constellation5" class="constellation-card">
-          <h3>Scorpius (The Scorpion)</h3>
           <img
             src="./image_guide/5. Scorpius (The Scorpion).jpg"
             alt="Scorpius (The Scorpion)"
           />
+          <div class="card-info">
+            <h3>Scorpius (The Scorpion)</h3>
 
-          <p>
-            Scorpius becomes visible in the southern sky during summer, known
-            for its curved tail and the bright, reddish star Antares. In
-            mythology, it is known as the scorpion that killed the hunter Orion.
-          </p>
+            <p>
+              Scorpius becomes visible in the southern sky during summer, known
+              for its curved tail and the bright, reddish star Antares. In
+              mythology, it is known as the scorpion that killed the hunter
+              Orion.
+            </p>
+          </div>
         </article>
 
         <article id="constellation6" class="constellation-card">
-          <h3>Gemini (The Twins)</h3>
           <img
             src="./image_guide/6. Gemini (The Twins).jpg"
             alt="Gemini (The Twins)"
           />
+          <div class="card-info">
+            <h3>Gemini (The Twins)</h3>
 
-          <p>
-            The constellation represents the mythical twins Castor and Pollux,
-            with the two stars of the same names marking their heads. Gemini is
-            part of the zodiac and is visible in the winter sky.
-          </p>
+            <p>
+              The constellation represents the mythical twins Castor and Pollux,
+              with the two stars of the same names marking their heads. Gemini
+              is part of the zodiac and is visible in the winter sky.
+            </p>
+          </div>
         </article>
 
         <article id="constellation7" class="constellation-card">
-          <h3>Leo (The Lion)</h3>
           <img src="./image_guide/7. Leo (The Lion).jpg" alt="Leo (The Lion)" />
 
-          <p>
-            Leo appears in the spring sky and resembles a lion shape. Its
-            brightest star, Regulus, represents the lion’s heart. In mythology,
-            Leo is associated with the Nemean Lion slain by Hercules. .
-          </p>
+          <div class="card-info">
+            <h3>Leo (The Lion)</h3>
+            <p>
+              Leo appears in the spring sky and resembles a lion shape. Its
+              brightest star, Regulus, represents the lion’s heart. In
+              mythology, Leo is associated with the Nemean Lion slain by
+              Hercules. .
+            </p>
+          </div>
         </article>
 
         <article id="constellation8" class="constellation-card">
-          <h3>Taurus (The Bull)</h3>
           <img
             src="./image_guide/8. Taurus (The Bull).jpg"
             alt="Taurus (The Bull)"
           />
-          <p>
-            Taurus is known for its V shape and the bright star Aldebaran. In
-            Greek mythology, it represents Zeus transforming into a bull to
-            abduct Europa. It also includes the famous Pleiades and Hyades star
-            clusters.p>
-          </p>
+          <div class="card-info">
+            <h3>Taurus (The Bull)</h3>
+            <p>
+              Taurus is known for its V shape and the bright star Aldebaran. In
+              Greek mythology, it represents Zeus transforming into a bull to
+              abduct Europa. It also includes the famous Pleiades and Hyades
+              star clusters.p>
+            </p>
+          </div>
         </article>
 
         <article id="constellation9" class="constellation-card">
-          <h3>Sagittarius (The Archer)</h3>
           <img
             src="./image_guide/9. Sagittarius (The Archer).jpg"
             alt="Sagittarius (The Archer)"
           />
 
-          <p>
-            Sagittarius resembles an archer holding a bow and faces the center
-            of the Milky Way Galaxy. It forms a “teapot” shape and contains many
-            stars, making it a part of the zodiac.
-          </p>
+          <div class="card-info">
+            <h3>Sagittarius (The Archer)</h3>
+            <p>
+              Sagittarius resembles an archer holding a bow and faces the center
+              of the Milky Way Galaxy. It forms a “teapot” shape and contains
+              many stars, making it a part of the zodiac.
+            </p>
+          </div>
         </article>
 
         <article id="constellation10" class="constellation-card">
-          <h3>Aquarius (The Water Bearer)</h3>
           <img
             src="./image_guide/10. Aquarius (The Water Bearer).jpg"
             alt="Aquarius (The Water Bearer)"
           />
+          <div class="card-info">
+            <h3>Aquarius (The Water Bearer)</h3>
 
-          <p>
-            A member of the zodiac, Aquarius is depicted as a figure pouring
-            water. It has been associated with water since ancient times and
-            spans a wide area of the sky, becoming visible in autumn.
-          </p>
+            <p>
+              A member of the zodiac, Aquarius is depicted as a figure pouring
+              water. It has been associated with water since ancient times and
+              spans a wide area of the sky, becoming visible in autumn.
+            </p>
+          </div>
         </article>
 
         <article id="constellation11" class="constellation-card">
-          <h3>Pisces (The Fish)</h3>
           <img
             src="./image_guide/11. Pisces (The Fish).jpg"
             alt="Pisces (The Fish)"
           />
 
-          <p>
-            Pisces is one of the zodiac constellations and represents two fish
-            tied together. It is said to symbolize the myth of Aphrodite and her
-            son Eros transforming into fish to escape a monster. It forms a V
-            shape in the sky.
-          </p>
+          <div class="card-info">
+            <h3>Pisces (The Fish)</h3>
+
+            <p>
+              Pisces is one of the zodiac constellations and represents two fish
+              tied together. It is said to symbolize the myth of Aphrodite and
+              her son Eros transforming into fish to escape a monster. It forms
+              a V shape in the sky.
+            </p>
+          </div>
         </article>
 
         <article id="constellation12" class="constellation-card">
-          <h3>Corona Borealis (The Northern Crown)</h3>
           <img
             src="./image_guide/12. Corona Borealis (The Northern Crown).jpg"
             alt="Corona Borealis (The Northern Crown)"
           />
 
-          <p>
-            This small crown-shaped constellation is visible in the northern
-            hemisphere. In Greek mythology, it represents the crown given to
-            Ariadne by the god Dionysus.
-          </p>
+          <div class="card-info">
+            <h3>Corona Borealis (The Northern Crown)</h3>
+
+            <p>
+              This small crown-shaped constellation is visible in the northern
+              hemisphere. In Greek mythology, it represents the crown given to
+              Ariadne by the god Dionysus.
+            </p>
+          </div>
         </article>
 
         <article id="constellation13" class="constellation-card">
-          <h3>Aquila (The Eagle)</h3>
           <img
             src="./image_guide/13. Aquila (The Eagle).jpg"
             alt="Aquila (The Eagle)"
           />
+          <div class="card-info">
+            <h3>Aquila (The Eagle)</h3>
 
-          <p>
-            Known for its brightest star Altair, Aquila becomes prominent in the
-            summer sky. In mythology, it represents Zeus’ eagle and is part of
-            the “Summer Triangle,” along with Lyra and Cygnus constellations.
-          </p>
+            <p>
+              Known for its brightest star Altair, Aquila becomes prominent in
+              the summer sky. In mythology, it represents Zeus’ eagle and is
+              part of the “Summer Triangle,” along with Lyra and Cygnus
+              constellations.
+            </p>
+          </div>
         </article>
 
         <article id="constellation14" class="constellation-card">
-          <h3>Bootes (The Herdsman)</h3>
           <img
             src="./image_guide/14. Boötes (The Herdsman).jpg"
             alt="Bootes (The Herdsman)"
           />
+          <div class="card-info">
+            <h3>Bootes (The Herdsman)</h3>
 
-          <p>
-            Known as the herdsman, Bootes contains the bright star Arcturus, one
-            of the brightest stars in the sky. It can be observed in spring and
-            has been seen in ancient tales as a figure protecting agriculture
-            and farming.
-          </p>
+            <p>
+              Known as the herdsman, Bootes contains the bright star Arcturus,
+              one of the brightest stars in the sky. It can be observed in
+              spring and has been seen in ancient tales as a figure protecting
+              agriculture and farming.
+            </p>
+          </div>
         </article>
 
         <article id="constellation15" class="constellation-card">
-          <h3>Pegasus (The Winged Horse)</h3>
           <img
             src="./image_guide/15. Pegasus (The Winged Horse).jpg"
             alt="Pegasus (The Winged Horse)"
           />
 
-          <p>
-            The Pegasus constellation forms a large square in the sky,
-            representing the mythical winged horse Pegasus. It becomes prominent
-            in autumn, creating a shape known as the “Great Square.”
-          </p>
+          <div class="card-info">
+            <h3>Pegasus (The Winged Horse)</h3>
+
+            <p>
+              The Pegasus constellation forms a large square in the sky,
+              representing the mythical winged horse Pegasus. It becomes
+              prominent in autumn, creating a shape known as the “Great Square.”
+            </p>
+          </div>
         </article>
       </div>
     </section>
@@ -352,16 +400,11 @@
           <img src="./image/Gemini.jpg" alt="Gemini" />
           <span class="image-name">Gemini</span>
         </div>
-        <div class="gallery-item"><img src="./image/Leo.jpg" alt="Leo" /></div>
-        <span class="image-name">Leo</span>
         <div class="gallery-item">
-          <img src="./image/Ursa_Major.jpg" alt="Ursa_Major" />
-          <span class="image-name">Ursa Major</span>
+          <img src="./image/Leo.jpg" alt="Leo" />
+          <span class="image-name">Leo</span>
         </div>
-        <div class="gallery-item">
-          <img src="./image/Ursa_Minor.jpg" alt="Ursa_Minor" />
-          <span class="image-name">Ursa Minor</span>
-        </div>
+
         <div class="gallery-item">
           <img src="./image/Taurus.jpg" alt="Taurus" />
           <span class="image-name">Taurus</span>
@@ -382,6 +425,15 @@
           <img src="./image/Orion.jpg" alt="Orion" />
           <span class="image-name">Orion</span>
         </div>
+
+        <div class="gallery-item">
+          <img src="./image/Ursa_Major.jpg" alt="Ursa_Major" />
+          <span class="image-name">Ursa Major</span>
+        </div>
+        <div class="gallery-item">
+          <img src="./image/Ursa_Minor.jpg" alt="Ursa_Minor" />
+          <span class="image-name">Ursa Minor</span>
+        </div>
         <div class="gallery-item">
           <img src="./image/Sagittarius.jpg" alt="Sagittarius" />
           <span class="image-name">Sagittarius</span>
@@ -390,7 +442,123 @@
     </section>
     <section class="calender" id="fourth">
       <h2>Constellations of the Night Sky</h2>
-      <img src="" alt="" class="calender_img" />
+
+      <table>
+        <thead>
+          <tr>
+            <th>Constellation</th>
+            <th>Hemisphere</th>
+            <th>Best Viewing Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ursa Major (The Great Bear)</td>
+            <td>Northern Hemisphere</td>
+            <td>All year, but most prominent in spring.</td>
+          </tr>
+          <tr>
+            <td>Ursa Minor (The Little Bear)</td>
+            <td>Northern Hemisphere</td>
+            <td>
+              All year. Always points north and remains visible year-round.
+            </td>
+          </tr>
+          <tr>
+            <td>Orion (The Hunter)</td>
+            <td>Both hemispheres</td>
+            <td>
+              Winter (December - February). Easily recognized by its three belt
+              stars in winter.
+            </td>
+          </tr>
+          <tr>
+            <td>Cassiopeia</td>
+            <td>Northern Hemisphere</td>
+            <td>All year. Most prominent in fall and winter.</td>
+          </tr>
+          <tr>
+            <td>Scorpius (The Scorpion)</td>
+            <td>Southern Hemisphere</td>
+            <td>
+              Summer (June - August). Best viewed low in the southern sky during
+              summer.
+            </td>
+          </tr>
+          <tr>
+            <td>Gemini (The Twins)</td>
+            <td>Both hemispheres</td>
+            <td>
+              Winter (December - February). Most visible in the northern sky
+              during winter.
+            </td>
+          </tr>
+          <tr>
+            <td>Leo (The Lion)</td>
+            <td>Both hemispheres</td>
+            <td>Spring (March - May). Rises in the east on spring evenings.</td>
+          </tr>
+          <tr>
+            <td>Taurus (The Bull)</td>
+            <td>Both hemispheres</td>
+            <td>
+              Winter (November - January). Prominent in the night sky during
+              winter.
+            </td>
+          </tr>
+          <tr>
+            <td>Sagittarius (The Archer)</td>
+            <td>Southern Hemisphere</td>
+            <td>Summer (June - August). Seen in the southern sky in summer.</td>
+          </tr>
+          <tr>
+            <td>Aquarius (The Water Bearer)</td>
+            <td>Both hemispheres</td>
+            <td>
+              Fall (September - November). Most visible in the eastern sky
+              during fall.
+            </td>
+          </tr>
+          <tr>
+            <td>Pisces (The Fish)</td>
+            <td>Both hemispheres</td>
+            <td>
+              Fall (September - November). Visible in the night sky during fall.
+            </td>
+          </tr>
+          <tr>
+            <td>Corona Borealis (The Northern Crown)</td>
+            <td>Northern Hemisphere</td>
+            <td>
+              Spring (April - June). Appears in the northern sky in spring.
+            </td>
+          </tr>
+          <tr>
+            <td>Aquila (The Eagle)</td>
+            <td>Both hemispheres</td>
+            <td>
+              Summer (June - August). Part of the 'Summer Triangle' and most
+              visible in summer.
+            </td>
+          </tr>
+          <tr>
+            <td>Bootes (The Herdsman)</td>
+            <td>Northern Hemisphere</td>
+            <td>
+              Spring (March - May). Recognized in spring in the north,
+              especially with Arcturus.
+            </td>
+          </tr>
+          <tr>
+            <td>Pegasus (The Winged Horse)</td>
+            <td>Both hemispheres</td>
+            <td>
+              Fall (September - November). Becomes prominent in the night sky
+              during fall.
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="faq" id="fifth">
@@ -654,5 +822,8 @@
         </div>
       </article>
     </section>
+    <footer>
+      <a href="#up">Back to Top</a>
+    </footer>
   </body>
 </html>
